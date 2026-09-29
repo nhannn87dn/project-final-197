@@ -9,7 +9,6 @@ import customersRouter from "./routes/v1/customers.route"
 import ordersRouter from "./routes/v1/orders.route"
 import uploadRouter from "./routes/v1/upload.route"
 import emailRouter from "./routes/v1/mail.route"
-import blogRouter from "./routes/v1/blog.route"
 import createError from 'http-errors';
 import { appMiddleware } from './middleware/appMiddleware.middleware';
 import cors from 'cors';
@@ -44,7 +43,6 @@ app.use('/api/v1/customers', customersRouter);
 app.use('/api/v1/orders', ordersRouter);
 app.use('/api/v1/uploads', uploadRouter);
 app.use('/api/v1/mail', emailRouter);
-app.use('/api/v1/blogs', blogRouter);
 /** END ROUTES */
 
 
