@@ -1,0 +1,36 @@
+# Cấu hình domain chung
+@accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWE0YzE2NWQxNjcyNzc1OGFjMmJkNGQiLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJpYXQiOjE3ODkxODI4NTYsImV4cCI6MTc4OTE4NjQ1Nn0.rzVyulfdSj4_GohAfqL9Z35D2h2HKaNeNwlWm9bQ5KM
+@baseUrl=http://localhost:9000
+
+# get brands
+GET {{baseUrl}}/api/v1/brands
+Authorization: Bearer {{accessToken}}
+
+### get brands select options
+GET {{baseUrl}}/api/v1/brands/select-options
+
+
+# get brand by id
+GET {{baseUrl}}/api/v1/brands/2
+
+### create new a brand
+POST {{baseUrl}}/api/v1/brands
+Content-Type: application/json
+
+{
+	"brand_name": "Oppo",
+	"description": "Brand giá tốt"
+}
+
+
+### Update by ID
+PUT {{baseUrl}}/api/v1/brands/3
+Content-Type: application/json
+
+{
+	"brand_name": "Xiaomi new"
+}
+
+
+### Delete by ID
+DELETE  {{baseUrl}}/api/v1/brands/4
